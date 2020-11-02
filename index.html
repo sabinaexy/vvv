@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Velvet Views Studios</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="menu">
+      <nav>
+        <div class="logo">
+         <!-- Take out logo here <img src="images/original.png"> -->
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Book</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="images/Original.png" class="vvs">
+        <div id="circle">
+          <div class="feature one">
+            <img src="images/bam.jpg">
+            <div>
+              <h1>Children</h1>
+              <p>Ages 6 months - 10 year olds</p>
+            </div>
+          </div>
+          <div class="feature two">
+            <img src="images/couple.jpg">
+            <div>
+              <h1>Couples</h1>
+              <p>Your partner, or your homie.</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="images/lulu.JPG">
+            <div>
+              <h1>Branding</h1>
+              <p>Next level marketing.</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img src="images/val.JPG">
+            <div>
+              <h1>Headshots</h1>
+              <p>Grade A headshots.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <img src="images/arrow.png" id="up">
+        <h3>Packages</h3>
+        <img src="images/arrow.png" id="down">
+      </div>
+    </div>
+    <script>
+      var circle = document.getElementById("circle");
+      var up = document.getElementById("up");
+      var down = document.getElementById("down");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum; 
+
+      up.onclick = function() {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      }
+      down.onclick = function() {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      }
+    </script>
+  </body>
+</html>
